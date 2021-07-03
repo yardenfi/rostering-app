@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import {DriversService} from "./services/drivers.service";
+import {DriversService} from "./services/drivers/drivers.service";
 
 @Component({
   selector: 'app-root',

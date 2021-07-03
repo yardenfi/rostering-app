@@ -1,6 +1,6 @@
 import {IDriver} from "./driver.interface";
 
-export class Driver {
+export class Driver implements IDriver {
   constructor(public id: string,
               public name: string,
               public phone: string,

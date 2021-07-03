@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import {DriversService} from "../../services/drivers.service";
+import {DriversService} from "../../services/drivers/drivers.service";
 import {Driver} from "../../models/drivers/driver";
 
 @Component({

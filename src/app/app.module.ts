@@ -2,12 +2,13 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
 import { AppComponent } from './app.component';
-import {DriversService} from "./services/drivers.service";
+import {DriversService} from "./services/drivers/drivers.service";
 import {HttpClientModule} from "@angular/common/http";
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { HeaderComponent } from './components/header/header.component';
 import { DriversTableComponent } from './components/drivers-table/drivers-table.component';
-import { TasksTableComponent } from './components/tasks-table/tasks-table.component';
+import { AssignmentsTableComponent } from './components/assignments-table/assignments-table.component';
+import {AssignmentsService} from "./services/assignments/assignments.service";
 
 @NgModule({
   imports: [
@@ -19,9 +20,9 @@ import { TasksTableComponent } from './components/tasks-table/tasks-table.compon
     AppComponent,
     HeaderComponent,
     DriversTableComponent,
-    TasksTableComponent
+    AssignmentsTableComponent
   ],
-  providers: [DriversService],
+  providers: [DriversService, AssignmentsService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
