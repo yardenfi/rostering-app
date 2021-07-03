@@ -9,12 +9,14 @@ import { HeaderComponent } from './components/header/header.component';
 import { DriversTableComponent } from './components/drivers-table/drivers-table.component';
 import { AssignmentsTableComponent } from './components/assignments-table/assignments-table.component';
 import {AssignmentsService} from "./services/assignments/assignments.service";
+import {NgxRangeModule} from "ngx-range";
 
 @NgModule({
   imports: [
     BrowserModule,
     HttpClientModule,
-    NgbModule
+    NgbModule,
+    NgxRangeModule
   ],
   declarations: [
     AppComponent,

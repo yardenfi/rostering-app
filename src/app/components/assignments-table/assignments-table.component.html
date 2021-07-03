@@ -1,1 +1,13 @@
-<p>assignments-table works!</p>
+<table class="table table-responsive">
+  <tr>
+    <th>Task ID</th>
+    <th *ngxRange="let dayNumber from 1 to 7">Day {{dayNumber}}</th>
+  </tr>
+
+  <tr *ngFor="let assignment of assignments">
+    <td>{{assignment.lineDisplayId}}</td>
+    <td *ngFor="let task of assignment.tasks">
+      {{task.type}}
+    </td>
+  </tr>
+</table>
