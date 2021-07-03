@@ -1,5 +1,5 @@
 export interface IAssignment {
-  id: string,
+  id: string | null,
   taskLineId: string,
   driverId: string
 }

@@ -1,7 +1,7 @@
 import {IAssignment} from "./assignment.interface";
 
 export class Assignment implements IAssignment {
-  constructor(public id: string,
+  constructor(public id: string | null,
               public taskLineId: string,
               public driverId: string) {
   }

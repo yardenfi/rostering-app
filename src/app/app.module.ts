@@ -11,19 +11,25 @@ import { TasksTableComponent } from './components/tasks-table/tasks-table.compon
 import {TasksService} from "./services/tasks/tasks.service";
 import {NgxRangeModule} from "ngx-range";
 import {AssignmentsService} from "./services/assignments/assignments.service";
+import {NgSelectModule} from "@ng-select/ng-select";
+import { DriverCellComponent } from './components/tasks-table/driver-cell/driver-cell.component';
+import {FormsModule} from "@angular/forms";
 
 @NgModule({
   imports: [
     BrowserModule,
     HttpClientModule,
     NgbModule,
-    NgxRangeModule
+    NgxRangeModule,
+    NgSelectModule,
+    FormsModule
   ],
   declarations: [
     AppComponent,
     HeaderComponent,
     DriversTableComponent,
-    TasksTableComponent
+    TasksTableComponent,
+    DriverCellComponent
   ],
   providers: [DriversService, TasksService, AssignmentsService],
   bootstrap: [AppComponent]

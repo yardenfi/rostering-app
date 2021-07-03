@@ -1,10 +1,13 @@
 <table class="table table-responsive">
   <tr>
+    <th>Driver</th>
     <th>Task ID</th>
     <th *ngxRange="let dayNumber from 1 to 8">Day {{dayNumber}}</th>
   </tr>
 
   <tr *ngFor="let task of tasks">
+    <td class="driver-cell" app-driver-cell [drivers]="drivers" [task]="task">
+    </td>
     <td>{{task.lineDisplayId}}</td>
     <td *ngFor="let task of task.tasks">
       {{task.type}}

@@ -25,6 +25,5 @@ export class DriversTableComponent implements OnInit {
     for (const assignment of assignments) {
       this.assignmentsByDriver.set(assignment.driverId, assignment);
     }
-    console.log(this.assignmentsByDriver);
   }
 }
