@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import {DriversService} from "./services/drivers.service";
 
 @Component({
   selector: 'app-root',
@@ -6,5 +7,7 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'rostering-app';
+  constructor(private driversService: DriversService) {
+    this.driversService.getDrivers().subscribe(console.log);
+  }
 }
