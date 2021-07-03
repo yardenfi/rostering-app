@@ -3,6 +3,7 @@ const driversData = require('./data/drivers');
 const tasksData = require('./data/tasks');
 const {createDriverRouter} = require("./routes/drivers");
 const {createTasksRouter} = require("./routes/tasks");
+const {createAssignmentsRouter} = require("./routes/assignments");
 const bodyParser = require('body-parser');
 const cors = require('cors');
 
@@ -14,6 +15,7 @@ app.use(cors());
 
 app.use("/drivers", createDriverRouter(driversData));
 app.use("/tasks", createTasksRouter(tasksData));
+app.use("/assignments", createAssignmentsRouter());
 
 
 app.listen(port, () => {

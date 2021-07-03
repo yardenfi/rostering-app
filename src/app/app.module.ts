@@ -10,6 +10,7 @@ import { DriversTableComponent } from './components/drivers-table/drivers-table.
 import { TasksTableComponent } from './components/tasks-table/tasks-table.component';
 import {TasksService} from "./services/tasks/tasks.service";
 import {NgxRangeModule} from "ngx-range";
+import {AssignmentsService} from "./services/assignments/assignments.service";
 
 @NgModule({
   imports: [
@@ -24,7 +25,7 @@ import {NgxRangeModule} from "ngx-range";
     DriversTableComponent,
     TasksTableComponent
   ],
-  providers: [DriversService, TasksService],
+  providers: [DriversService, TasksService, AssignmentsService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
