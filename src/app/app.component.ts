@@ -7,7 +7,4 @@ import {DriversService} from "./services/drivers.service";
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  constructor(private driversService: DriversService) {
-    this.driversService.getDrivers().subscribe(console.log);
-  }
 }
