@@ -4,9 +4,9 @@
     <th *ngxRange="let dayNumber from 1 to 8">Day {{dayNumber}}</th>
   </tr>
 
-  <tr *ngFor="let assignment of assignments">
-    <td>{{assignment.lineDisplayId}}</td>
-    <td *ngFor="let task of assignment.tasks">
+  <tr *ngFor="let task of tasks">
+    <td>{{task.lineDisplayId}}</td>
+    <td *ngFor="let task of task.tasks">
       {{task.type}}
     </td>
   </tr>

@@ -1,6 +1,6 @@
 import {TaskType} from "./task-type.enum";
 
-export interface ITask {
+export interface ITaskItem {
   taskID: string,
   type: TaskType
 }

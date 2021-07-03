@@ -1,8 +1,8 @@
 const express = require('express');
 const driversData = require('./data/drivers');
-const assignmentsData = require('./data/assignments');
+const tasksData = require('./data/tasks');
 const {createDriverRouter} = require("./routes/drivers");
-const {createAssignmentsRouter} = require("./routes/assignments");
+const {createTasksRouter} = require("./routes/tasks");
 const bodyParser = require('body-parser');
 const cors = require('cors');
 
@@ -13,7 +13,7 @@ app.use(bodyParser.json());
 app.use(cors());
 
 app.use("/drivers", createDriverRouter(driversData));
-app.use("/assignments", createAssignmentsRouter(assignmentsData));
+app.use("/tasks", createTasksRouter(tasksData));
 
 
 app.listen(port, () => {
